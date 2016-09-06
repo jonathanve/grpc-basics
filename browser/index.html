@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="application/javascript" src="https://raw.githubusercontent.com/swagger-api/swagger-js/master/browser/swagger-client.min.js"></script>
+    <script type="text/javascript"> 
+        window.client = new SwaggerClient({
+            url: "http://localhost:8080/swagger/helloworld.swagger.json",
+            success: function() {
+                console.log('OK');
+                client.Greeter.SayHello(
+                    { body: { "name": "Jon" } },
+                    { responseContentType: 'application/json' },
+                    function(data) {
+                        document.getElementById("mydata").innerHTML = JSON.stringify(data.obj);
+                    }
+                );
+            }
+        });
+    </script>
+    <body>
+        <h3>GRPC and Swagger</h3>
+        <div id="mydata"></div>
+    </body>
+</html>
