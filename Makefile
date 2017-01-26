@@ -23,12 +23,12 @@ all:
 	protoc \
 		-I /usr/local/include -I . \
 		-I ${GOPATH}/src \
-		-I ${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
+		--plugin=protoc-gen-grpc=`which grpc_python_plugin` \
 		--python_out=. \
 		--grpc_out=. \
-		--plugin=protoc-gen-grpc=`which grpc_python_plugin` \
 		helloworld/helloworld_raw.proto
 	cp helloworld/helloworld_raw_pb2.py client/
+	cp helloworld/helloworld_raw_pb2.py server/
 
 clean:
 	rm helloworld/*.pb.go && rm helloworld/*.pb.gw.go
