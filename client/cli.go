@@ -6,7 +6,7 @@ import (
 
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-	pb "google.golang.org/grpc/examples/hw/helloworld"
+	pb "github.com/jonathanve/grpc-basics/helloworld"
 )
 
 const (

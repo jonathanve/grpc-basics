@@ -6,7 +6,6 @@
         window.client = new SwaggerClient({
             url: "http://localhost:8080/swagger/helloworld.swagger.json",
             success: function() {
-                console.log('OK');
                 client.Greeter.SayHello(
                     { body: { "name": "Jon" } },
                     { responseContentType: 'application/json' },

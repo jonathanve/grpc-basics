@@ -7,7 +7,7 @@ var hello_proto = grpc.load(PROTO_PATH).helloworld;
  * Implements the SayHello RPC method.
  */
 function sayHello(call, callback) {
-  callback(null, {message: 'Hello ' + call.request.name});
+  callback(null, {message: 'Hello ' + call.request.name + ' (js)!'});
 }
 
 /**

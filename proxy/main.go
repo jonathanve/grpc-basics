@@ -12,7 +12,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	gw "google.golang.org/grpc/examples/hw/helloworld"
+	gw "github.com/jonathanve/grpc-basics/helloworld"
 )
 
 var (

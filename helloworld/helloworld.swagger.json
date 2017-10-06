@@ -47,8 +47,7 @@
       "type": "object",
       "properties": {
         "message": {
-          "type": "string",
-          "format": "string"
+          "type": "string"
         }
       }
     },
@@ -56,8 +55,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "type": "string",
-          "format": "string"
+          "type": "string"
         }
       }
     }

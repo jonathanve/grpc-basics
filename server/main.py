@@ -10,7 +10,7 @@ _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 class Greeter(helloworld_raw_pb2.GreeterServicer):
 
   def SayHello(self, request, context):
-    return helloworld_raw_pb2.HelloReply(message='Hello, %s!' % request.name)
+    return helloworld_raw_pb2.HelloReply(message='Hello, %s (py)!' % request.name)
 
 
 def serve():
